@@ -1,0 +1,80 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+
+
+{% block seccion %}
+    <h1>Info sobre profesores</h1>
+{% endblock %}
+
+
+
+{% block contenido %}
+
+
+
+
+<main>
+<br>
+
+{% for profe in profesores %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'app2/assets/img/testimonials-1.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{profe.nombre}}</h5>
+          <p class="card-text">{{profe.materia}}</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endfor %}
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static 'app2/assets/img/testimonials-1.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Laura Perez</h5>
+            <p class="card-text">Profe de Python</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static 'app2/assets/img/testimonials-2.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Juan Lopez</h5>
+            <p class="card-text">Profe de HTML</p>
+           
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card" style="width: 18rem;">
+          <img src="{% static 'app2/assets/img/testimonials-3.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Maria Rodriguez</h5>
+            <p class="card-text">Profe de Java</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</main>
+
+
+
+
+
+{% endblock %}

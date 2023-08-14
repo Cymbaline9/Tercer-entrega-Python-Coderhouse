@@ -1,0 +1,40 @@
+{% extends "padre.html" %}
+
+
+
+
+{% block seccion %}
+    <h1>Cursos disponibles</h1>
+    
+{% endblock %}
+
+{% block contenido %}
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Comision</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+
+            {% for curso in cursos %}
+       
+            <tr>
+                <th scope="row">{{cursos.id}}</th>
+                <td>{{cursos.nombre}}</td>
+                <td>{{cursos.comision}}</td>
+                
+              </tr>
+    
+    {% endfor %}
+         
+         
+        </tbody>
+      </table>
+    
+
+{% endblock %}

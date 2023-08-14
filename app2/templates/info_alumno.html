@@ -1,0 +1,46 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+
+
+{% block seccion %}
+    <h1>Info sobre alumnos</h1>
+{% endblock %}
+
+
+
+{% block contenido %}
+
+
+
+
+<main>
+<br> 
+
+{% for alumno in alumnos %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'app2/assets/img/testimonials-1.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{alumnos.nombre}}</h5>
+          <p class="card-text">{{alumnos.dni}}</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endfor %}
+  
+</main>
+
+
+
+
+
+{% endblock %}
